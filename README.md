@@ -1,4 +1,4 @@
-# Modelling the Holstein Hamiltonian
+# Modelling the Holstein Hamiltonian for Polarons/Charges
 
 What is Holstein Hamiltonian?
 

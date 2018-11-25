@@ -1,5 +1,5 @@
 !******************************************************************************
-!This module contains all the variables that the program needs
+!This module contains all the variables that the main program will need
 !******************************************************************************
 
 
@@ -147,7 +147,7 @@ implicit none
 
        
 !****************************************************************************************************
-                                                                                               !Main Program!
+                                !Main Program starts here!
 !****************************************************************************************************
 program cms
 use common_variables
@@ -210,7 +210,7 @@ integer config, complete
   
     
 !****************************************************************************************************
-                                                  !We need to set the Frank Condon factors for the vibrational overlap factors
+   !We need to set the Frank Condon factors for the vibrational overlap factors
     call set_fctable()
 !****************************************************************************************************        
     
@@ -221,7 +221,7 @@ integer config, complete
       call allocate_hev()
 
   !*******************************************************************************************************************************!
-                        !We build the hamiltonian here; the one particle hamiltonian, two particle hamiltonian and the one particle -  two particle hamiltonian
+    !We build the hamiltonian here; the one particle hamiltonian, two particle hamiltonian and the one particle -  two particle hamiltonian
        
         if ( one_state ) call hamiltonian_1p(config)
         if ( two_state ) call hamiltonian_2p(config)
@@ -242,17 +242,17 @@ end program
 
 
 !****************************************************************************************************
-                                                                                               !main program ends
+                               !main program ends
 !****************************************************************************************************
 
 
 !****************************************************************************************************
-                                                                              !Subroutines used for the program
+                  !Subroutines used for the program
 !****************************************************************************************************
 
 
 !****************************************************************************************************
-                                                     !Subroutine set_para()  sets the parameters that are needed for the hamiltonian. 
+       !Subroutine set_para()  sets the parameters that are needed for the hamiltonian. 
                                    
 !****************************************************************************************************
 
@@ -587,7 +587,7 @@ end subroutine
 
 
 !**********************************************!
-!                        create the one particle Hamiltonian                                 !
+!     create the one particle Hamiltonian                                 !
 !**********************************************!
 subroutine hamiltonian_1p(config)
     use common_variables
@@ -641,7 +641,7 @@ subroutine hamiltonian_1p(config)
 end subroutine
 
 !***********************************************************!
-!                        create the one particle and two particle hamiltonian                                 
+!    create the one particle and two particle hamiltonian                                 
 !***********************************************************!
 
 
@@ -696,7 +696,7 @@ subroutine hamiltonian_1p2p(config)
 end subroutine
 
 !**********************************************!
-!                        create the two particle  hamiltonian                             !
+!     create the two particle  hamiltonian     !
 !**********************************************!
 
 subroutine hamiltonian_2p(config)
@@ -778,7 +778,7 @@ subroutine hamiltonian_2p(config)
 end subroutine
 
 !**********************************************!
-!                        get the coupling function                           !
+!  get the coupling function                   !
 !**********************************************!
 pure real*8 function get_j( lx1, lx2, ly1, ly2, lz1, lz2,config )
     use common_variables
@@ -823,7 +823,7 @@ pure real*8 function get_j( lx1, lx2, ly1, ly2, lz1, lz2,config )
 end function
 
 !********************************************************!
-!                        This subroutine sets the Frank Condon Factors                            !
+!  This subroutine sets the Frank Condon Factors         !
 !********************************************************!
 
 
@@ -918,7 +918,7 @@ subroutine set_fctable()
 end subroutine
 
 !********************************************************************
-                                    ! frank-condon calculations    
+                                    ! frank-condon Factors !
 !********************************************************************
 subroutine fcfac(n,m,s,fc)
 	implicit none
@@ -950,10 +950,6 @@ end subroutine
 
 !********************************************************************
 !	calculating factorial
-!	* i think, mathimatically numbers should be integers, but
-!	  here, i use real numbers for convenience.
-!                                                !this subroutine is from haj's program 'haj_polymer.f95'
-!                                                !i have made no changes
 !********************************************************************
 real*8 function fact( n )
 	implicit none

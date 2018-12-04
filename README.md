@@ -7,8 +7,7 @@ The Holstein molecular crystal Hamiltonian was originally introduced by Holstein
 
 What is included in the code?
 
-This was my first project after joining Dr. Spano's group; where I had to model the Holstein Hamiltonian for polarons using a multiparticle basis set. The details of multiparticle basis set and the theory can be found in the references mentioned below. I have given a short explanation about the model and the subroutines that has been used in the code in the powerpoint which will be uploaded soon. 
-
+This was my first project after joining Dr. Spano's group; where I had to model the Holstein Hamiltonian for polarons using a multiparticle basis set. The details of multiparticle basis set and the theory can be found in the references mentioned below. I have given a short explanation about the model. Please look into the powerpoint in the repository. I will keep updating the powerpoint over time. 
 
 
 Please go through the following references for detailed understanding of the model. Let me know if you any questions regarding the model.
